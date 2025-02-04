@@ -126,6 +126,7 @@
                   <Font name="Abyssinica SIL" size="27.0" />
                </font>
             </Text>
+            <Button mnemonicParsing="false" text="Button" />
          </children>
       </HBox>
       <HBox prefHeight="57.0" prefWidth="889.0" styleClass="input-group">
@@ -151,7 +152,7 @@
          <VBox.margin>
             <Insets left="220.0" />
          </VBox.margin>
-      </HBox>
+      </HBox> 
       <HBox prefHeight="57.0" prefWidth="889.0" styleClass="input-group">
          <children>
             <Label maxHeight="-Infinity" maxWidth="160.0" minHeight="160.0" minWidth="10.0" prefHeight="20.0" prefWidth="61.0" text="%fxml.text.viewUsers.role">
