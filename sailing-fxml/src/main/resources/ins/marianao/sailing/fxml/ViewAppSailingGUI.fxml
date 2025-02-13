@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.ScrollBar?>
 <?import javafx.scene.control.SeparatorMenuItem?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.input.KeyCodeCombination?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
 <VBox prefHeight="720.0" prefWidth="900.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ins.marianao.sailing.fxml.ControllerMenu">
@@ -118,133 +108,5 @@
 		<AnchorPane fx:id="portviewPane" styleClass="centerregion" BorderPane.alignment="CENTER" />
 	</center>
 	</BorderPane>
-      <AnchorPane styleClass="centerregion">
-         <children>
-            <GridPane hgap="10.0" vgap="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="30.0">
-               <columnConstraints>
-                  <ColumnConstraints halignment="LEFT" hgrow="NEVER" />
-                  <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-            </GridPane>
-         </children>
-      </AnchorPane>
-      <HBox prefHeight="57.0" prefWidth="889.0" styleClass="input-group">
-         <children>
-            <Label maxHeight="-Infinity" maxWidth="160.0" minHeight="160.0" minWidth="10.0" prefHeight="20.0" prefWidth="61.0" text="%fxml.text.viewTrips.pricefrom">
-               <HBox.margin>
-                  <Insets left="10.0" />
-               </HBox.margin>
-               <padding>
-                  <Insets left="10.0" />
-               </padding>
-            </Label>
-            <ComboBox fx:id="cmbRole" maxHeight="30.0" maxWidth="150.0" minHeight="30.0" minWidth="131.0" prefHeight="30.0" prefWidth="150.0" HBox.hgrow="ALWAYS">
-               <padding>
-                  <Insets right="10.0" />
-               </padding>
-            </ComboBox>
-            <Label prefHeight="20.0" prefWidth="61.0" text="%fxml.text.viewTrips.to">
-               <HBox.margin>
-                  <Insets left="10.0" />
-               </HBox.margin>
-            </Label>
-            <ComboBox fx:id="cmbRole11" maxWidth="65.0" prefWidth="65.0" />
-            <Label maxHeight="40.0" maxWidth="136.0" minHeight="30.0" minWidth="95.0" prefHeight="30.0" prefWidth="95.0" styleClass="label-large" text="%fxml.text.viewTrips.category">
-               <HBox.margin>
-                  <Insets left="10.0" />
-               </HBox.margin>
-            </Label>
-            <TextField fx:id="txtFullnameSearch" maxWidth="65.0" minWidth="39.0" prefWidth="39.0" promptText="%fxml.text.viewUsers.search.prompt" HBox.hgrow="ALWAYS" />
-         </children>
-      </HBox>
-      <HBox prefHeight="49.0" prefWidth="900.0" styleClass="input-group">
-         <children>
-            <Label maxHeight="-Infinity" maxWidth="160.0" minHeight="160.0" minWidth="10.0" prefHeight="20.0" prefWidth="61.0" text="%fxml.text.viewTrips.places.from">
-               <HBox.margin>
-                  <Insets left="10.0" />
-               </HBox.margin>
-               <padding>
-                  <Insets left="10.0" />
-               </padding>
-            </Label>
-            <ComboBox fx:id="cmbRole1" maxHeight="30.0" maxWidth="150.0" minHeight="30.0" minWidth="131.0" prefHeight="30.0" prefWidth="150.0" HBox.hgrow="ALWAYS">
-               <padding>
-                  <Insets right="10.0" />
-               </padding>
-            </ComboBox>
-            <Label prefHeight="20.0" prefWidth="61.0" text="%fxml.text.viewTrips.to">
-               <HBox.margin>
-                  <Insets left="10.0" />
-               </HBox.margin>
-            </Label>
-            <ComboBox fx:id="cmbRole111" maxWidth="65.0" prefWidth="65.0" />
-            <Label prefHeight="20.0" prefWidth="61.0" text="%fxml.text.viewTrips.duration.from">
-               <HBox.margin>
-                  <Insets left="10.0" />
-               </HBox.margin>
-            </Label>
-            <ComboBox fx:id="cmbRole11" maxWidth="73.0" minHeight="33.0" minWidth="73.0" prefHeight="33.0" prefWidth="73.0">
-               <HBox.margin>
-                  <Insets right="10.0" />
-               </HBox.margin>
-            </ComboBox>
-            <Label prefHeight="20.0" prefWidth="61.0" text="%fxml.text.viewTrips.to" />
-            <ComboBox fx:id="cmbRole112" maxWidth="73.0" minHeight="33.0" minWidth="73.0" prefHeight="33.0" prefWidth="73.0" />
-         </children>
-      </HBox>
-      <Pane prefHeight="411.0" prefWidth="990.0">
-         <VBox.margin>
-            <Insets right="10.0" />
-         </VBox.margin>
-         <children>
-            <ScrollBar layoutX="976.0" orientation="VERTICAL" prefHeight="411.0" prefWidth="17.0" />
-            <HBox layoutY="6.0" prefHeight="198.0" prefWidth="975.0">
-               <children>
-                  <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="GROUP&#10;1 Hour Sailing Tour&#10;1h Sailing Experience&#10;Max. Places: 9&#10;Price: 30,00 €&#10;Duration: 1 h.&#10;&#10;DEPARTURES&#10;&#10;9:30&#10;13:30&#10;17:30">
-                     <HBox.margin>
-                        <Insets left="10.0" right="20.0" />
-                     </HBox.margin>
-                  </TextArea>
-                  <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="GROUP&#10;2 Hours Sailing Tour&#10;Relaxing 2h Sailing Tour&#10;Max. Places: 9&#10;Price: 45,00 €&#10;Duration: 2 h.&#10;&#10;DEPARTURES&#10;&#10;11:30&#10;15:30">
-                     <HBox.margin>
-                        <Insets right="20.0" />
-                     </HBox.margin>
-                  </TextArea>
-                  <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="PRIVATE&#10;Private Luxury Sailing Tour&#10;Private Luxury Sailing Tour (max. 12)&#10;Max. Places: 12&#10;Price: 350,00 €&#10;Duration: 2 h.&#10;&#10;">
-                     <HBox.margin>
-                        <Insets right="20.0" />
-                     </HBox.margin>
-                  </TextArea>
-                  <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="PRIVATE&#10;Private Sailing Tour&#10;Private Sailing Tour (max. 9)&#10;Max. Places: 9&#10;Price: 200,00 €&#10;Duration: 1 h." />
-               </children>
-            </HBox>
-            <HBox layoutX="7.0" layoutY="206.0" prefHeight="198.0" prefWidth="960.0">
-               <children>
-                  <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="GROUP&#10;Sunset Sailing Tour&#10;Enjoy a beautiful sunset at sea&#10;Max. Places: 9&#10;Price: 50,00 €&#10;Duration: 2 h.&#10;&#10;DEPARTURES&#10;&#10;18:30">
-                     <HBox.margin>
-                        <Insets left="2.0" right="20.0" />
-                     </HBox.margin>
-                  </TextArea>
-                  <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="GROUP&#10;Morning Sailing &amp; Swim Tour&#10;Relaxing morning sailing with a swimming stop&#10;Max. Places: 9&#10;Price: 55,00 €&#10;Duration: 3 h.&#10;&#10;DEPARTURES&#10;&#10;9:00">
-                     <HBox.margin>
-                        <Insets right="20.0" />
-                     </HBox.margin>
-                  </TextArea>
-                  <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="PRIVATE&#10;Exclusive Romantic Sailing Tour&#10;A private sailing experience for couples&#10;Max. Places: 2&#10;Price: 250,00 €&#10;Duration: 2 h.&#10;&#10;">
-                     <HBox.margin>
-                        <Insets right="20.0" />
-                     </HBox.margin>
-                  </TextArea>
-                  <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="PRIVATE&#10;Full-Day Private Sailing Tour&#10;A complete day at sea with stops for swimming&#10;Max. Places: 12&#10;Price: 700,00 €&#10;Duration: 6 h." />
-               </children>
-               <padding>
-                  <Insets top="10.0" />
-               </padding>
-            </HBox>
-         </children>
-      </Pane>
   </children>
 </VBox>

@@ -4,129 +4,25 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.input.KeyCodeCombination?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="720.0" prefWidth="900.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ins.marianao.sailing.fxml.ControllerMenu">
+<VBox prefHeight="720.0" prefWidth="900.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ins.marianao.sailing.fxml.ControllerFormUser">
   <children>
-    <MenuBar fx:id="menuBar" VBox.vgrow="NEVER">
-      <menus>
-        <Menu mnemonicParsing="true" text="%fxml.text.menu.file">
-          <items>
-            <MenuItem mnemonicParsing="false" onAction="#exitClick" text="%fxml.text.menu.file.exit">
-                     <accelerator>
-                        <KeyCodeCombination alt="UP" code="X" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
-                     </accelerator></MenuItem>
-          </items>
-        </Menu>
-            <Menu fx:id="mnTrips" mnemonicParsing="true" text="%fxml.text.menu.trips">
-              <items>
-                <MenuItem fx:id="mnItBooking" mnemonicParsing="false" onAction="#bookingMenuClick" text="%fxml.text.menu.trips.booking">
-                     <accelerator>
-                        <KeyCodeCombination alt="UP" code="T" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
-                     </accelerator></MenuItem>
-                  <MenuItem fx:id="mnItTrips" mnemonicParsing="false" onAction="#tripsMenuClick" text="%fxml.text.menu.trips.view">
-                     <accelerator>
-                        <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
-                     </accelerator>
-                  </MenuItem>
-              </items>
-            </Menu>
-            <Menu fx:id="mnUsers" mnemonicParsing="false" text="%fxml.text.menu.users">
-              <items>
-                <MenuItem fx:id="mnItAddUser" mnemonicParsing="false" onAction="#newUserMenuClick" text="%fxml.text.menu.users.new">
-                <accelerator>
-                        <KeyCodeCombination alt="UP" code="U" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
-                     </accelerator></MenuItem>
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem fx:id="mnItUserDirectory" mnemonicParsing="false" onAction="#usersDirectoryMenuClick" text="%fxml.text.menu.users.directory">
-                     <accelerator>
-                        <KeyCodeCombination alt="UP" code="L" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
-                     </accelerator>
-                  </MenuItem>
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem fx:id="mnItImport" mnemonicParsing="false" onAction="#importUsersMenuClick" text="%fxml.text.menu.users.import" />
-                  <MenuItem fx:id="mnItExport" mnemonicParsing="false" onAction="#exportUsersMenuClick" text="%fxml.text.menu.users.export" />
-              </items>
-            </Menu>
-            <Menu fx:id="mnProfile" mnemonicParsing="false" text="%fxml.text.menu.profile">
-               <items>
-                  <MenuItem fx:id="mnItEditProfile" mnemonicParsing="false" onAction="#editProfileMenuClick" text="%fxml.text.menu.profile.edit">
-                     <accelerator>
-                        <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
-                     </accelerator>
-                  </MenuItem>
-            <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem fx:id="mnItLogoff" mnemonicParsing="false" onAction="#logoffClick" text="%fxml.text.menu.profile.logoff">
-                     <accelerator>
-                        <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
-                     </accelerator>
-                  </MenuItem>
-               </items>
-            </Menu>
-            <Menu fx:id="mnLogin" mnemonicParsing="false" text="%fxml.text.menu.login">
-               <items>
-                  <MenuItem fx:id="mnItLogin" mnemonicParsing="false" onAction="#loginMenuClick" text="%fxml.text.menu.login.form">
-                     <accelerator>
-                        <KeyCodeCombination alt="UP" code="L" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
-                     </accelerator>
-                  </MenuItem>
-                  <MenuItem fx:id="mnItRegister" mnemonicParsing="false" onAction="#newUserMenuClick" text="%fxml.text.menu.register.form">
-                     <accelerator>
-                        <KeyCodeCombination alt="UP" code="R" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
-                     </accelerator>
-                  </MenuItem>
-               </items></Menu>
-        <Menu mnemonicParsing="true" text="%fxml.text.menu.help">
-          <items>
-            <MenuItem mnemonicParsing="false" onAction="#aboutMenuClick" text="%fxml.text.menu.help.about" />
-
-          </items>
-        </Menu>
-      </menus>
-    </MenuBar>
-      <BorderPane fx:id="appRootPane">
-
-	<top>
-		<AnchorPane styleClass="topregion" BorderPane.alignment="CENTER">
-			<children>
-				<ImageView fitHeight="150.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
-					<image>
-						<Image url="@resources/insmarianao.png" />
-					</image>
-				</ImageView>
-				<Label layoutX="21.0" layoutY="18.0" prefHeight="80.0" prefWidth="518.0" styleClass="title" text="%fxml.text.app.title" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
-			</children>
-		</AnchorPane>
-	</top>
-	<center>
-		<AnchorPane fx:id="portviewPane" styleClass="centerregion" BorderPane.alignment="CENTER" />
-	</center>
-	</BorderPane>
-      <AnchorPane styleClass="centerregion" />
       <HBox prefHeight="57.0" prefWidth="889.0" styleClass="input-group">
          <VBox.margin>
             <Insets left="220.0" top="20.0" />
          </VBox.margin>
          <children>
-            <Text fill="#686868" strokeType="OUTSIDE" strokeWidth="0.0" text="User form" wrappingWidth="345.51953125">
+            <Text fill="#686868" strokeType="OUTSIDE" strokeWidth="0.0" text="%fxml.text.formUser.title" wrappingWidth="345.51953125">
                <font>
                   <Font name="Abyssinica SIL" size="27.0" />
                </font>
             </Text>
-            <Button mnemonicParsing="false" text="Button" />
          </children>
       </HBox>
       <HBox prefHeight="57.0" prefWidth="889.0" styleClass="input-group">
@@ -134,12 +30,12 @@
             <Insets left="220.0" />
          </VBox.margin>
          <children>
-            <ComboBox fx:id="cmbRole11" maxWidth="269.0" prefWidth="241.0" />
+            <ComboBox fx:id="comboBox" maxWidth="269.0" prefWidth="241.0" />
          </children>
       </HBox>
       <HBox prefHeight="57.0" prefWidth="889.0" styleClass="input-group">
          <children>
-            <Label maxHeight="-Infinity" maxWidth="160.0" minHeight="160.0" minWidth="10.0" prefHeight="20.0" prefWidth="61.0" text="%fxml.text.viewUsers.role">
+            <Label maxHeight="-Infinity" maxWidth="160.0" minHeight="160.0" minWidth="10.0" prefHeight="20.0" prefWidth="61.0" text="%fxml.text.login.username">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -147,7 +43,7 @@
                   <Insets left="10.0" />
                </padding>
             </Label>
-            <TextField fx:id="txtFullnameSearch2" maxWidth="350.0" minWidth="39.0" prefWidth="39.0" promptText="%fxml.text.viewUsers.search.prompt" HBox.hgrow="ALWAYS" />
+            <TextField fx:id="txtUsername" maxWidth="350.0" minWidth="39.0" prefWidth="39.0" promptText="%fxml.text.viewUsers.search.prompt" HBox.hgrow="ALWAYS" />
          </children>
          <VBox.margin>
             <Insets left="220.0" />
@@ -155,7 +51,7 @@
       </HBox> 
       <HBox prefHeight="57.0" prefWidth="889.0" styleClass="input-group">
          <children>
-            <Label maxHeight="-Infinity" maxWidth="160.0" minHeight="160.0" minWidth="10.0" prefHeight="20.0" prefWidth="61.0" text="%fxml.text.viewUsers.role">
+            <Label maxHeight="-Infinity" maxWidth="160.0" minHeight="160.0" minWidth="10.0" prefHeight="20.0" prefWidth="61.0" text="%fxml.text.formUser.password">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -163,7 +59,7 @@
                   <Insets left="10.0" />
                </padding>
             </Label>
-            <TextField fx:id="txtFullnameSearch3" maxWidth="350.0" minWidth="39.0" prefWidth="39.0" promptText="%fxml.text.viewUsers.search.prompt" HBox.hgrow="ALWAYS" />
+            <PasswordField fx:id="txtPassword" prefWidth="350.0" promptText="%fxml.text.formUser.password" />
          </children>
          <VBox.margin>
             <Insets left="220.0" />
@@ -171,7 +67,7 @@
       </HBox>
       <HBox prefHeight="57.0" prefWidth="350.0" styleClass="input-group">
          <children>
-            <Label maxHeight="-Infinity" maxWidth="160.0" minHeight="160.0" minWidth="10.0" prefHeight="20.0" prefWidth="61.0" text="%fxml.text.viewUsers.role">
+            <Label maxHeight="-Infinity" maxWidth="160.0" minHeight="160.0" minWidth="10.0" prefHeight="20.0" prefWidth="61.0" text="%fxml.text.formUser.password.confirm.lbl">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -179,7 +75,7 @@
                   <Insets left="10.0" />
                </padding>
             </Label>
-            <TextField fx:id="txtFullnameSearch4" maxWidth="350.0" minWidth="39.0" prefWidth="39.0" promptText="%fxml.text.viewUsers.search.prompt" HBox.hgrow="ALWAYS" />
+            <PasswordField fx:id="txtConfirm" prefWidth="350.0" promptText="%fxml.text.formUser.password.confirm" />
          </children>
          <VBox.margin>
             <Insets left="220.0" />
@@ -187,7 +83,7 @@
       </HBox>
       <HBox prefHeight="57.0" prefWidth="889.0" styleClass="input-group">
          <children>
-            <Label maxHeight="-Infinity" maxWidth="160.0" minHeight="160.0" minWidth="10.0" prefHeight="20.0" prefWidth="61.0" text="%fxml.text.viewUsers.role">
+            <Label maxHeight="-Infinity" maxWidth="160.0" minHeight="160.0" minWidth="10.0" prefHeight="20.0" prefWidth="61.0" text="%fxml.text.formUser.fullname.lbl">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -195,7 +91,7 @@
                   <Insets left="10.0" />
                </padding>
             </Label>
-            <TextField fx:id="txtFullnameSearch5" maxWidth="350.0" minWidth="39.0" prefWidth="39.0" promptText="%fxml.text.viewUsers.search.prompt" HBox.hgrow="ALWAYS" />
+            <TextField fx:id="txtName" maxWidth="350.0" minWidth="39.0" prefWidth="39.0" promptText="%fxml.text.viewUsers.search.prompt" HBox.hgrow="ALWAYS" />
          </children>
          <VBox.margin>
             <Insets left="220.0" />
@@ -203,7 +99,7 @@
       </HBox>
       <HBox prefHeight="57.0" prefWidth="889.0" styleClass="input-group">
          <children>
-            <Label maxHeight="-Infinity" maxWidth="160.0" minHeight="160.0" minWidth="10.0" prefHeight="20.0" prefWidth="61.0" text="%fxml.text.viewUsers.role">
+            <Label maxHeight="-Infinity" maxWidth="160.0" minHeight="160.0" minWidth="10.0" prefHeight="20.0" prefWidth="61.0" text="%fxml.text.formUser.phone.lbl">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -211,7 +107,7 @@
                   <Insets left="10.0" />
                </padding>
             </Label>
-            <TextField fx:id="txtFullnameSearch6" maxWidth="350.0" minWidth="39.0" prefWidth="39.0" promptText="%fxml.text.viewUsers.search.prompt" HBox.hgrow="ALWAYS" />
+            <TextField fx:id="txtPhone" maxWidth="350.0" minWidth="39.0" prefWidth="39.0" promptText="%fxml.text.viewUsers.search.prompt" HBox.hgrow="ALWAYS" />
          </children>
          <VBox.margin>
             <Insets left="220.0" />
@@ -219,7 +115,7 @@
       </HBox>
       <HBox prefHeight="57.0" prefWidth="889.0" styleClass="input-group">
          <children>
-            <Button fx:id="btnLogin" alignment="CENTER" defaultButton="true" maxWidth="441.0" minWidth="39.0" mnemonicParsing="false" onAction="#loginClick" prefHeight="36.0" prefWidth="40.0" styleClass="button-fullwidth" text="%fxml.text.login.submit" textAlignment="CENTER" />
+            <Button fx:id="btnRegister" alignment="CENTER" defaultButton="true" maxWidth="441.0" minWidth="39.0" mnemonicParsing="false" onAction="#loginClick" prefHeight="36.0" prefWidth="40.0" styleClass="button-fullwidth" text="%fxml.text.formUser.submit" textAlignment="CENTER" />
          </children>
          <VBox.margin>
             <Insets left="220.0" />

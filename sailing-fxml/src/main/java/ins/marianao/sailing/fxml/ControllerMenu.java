@@ -12,6 +12,7 @@ import java.util.ResourceBundle;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 
 import cat.institutmarianao.sailing.ws.model.User;
+import ch.qos.logback.core.util.Loader;
 import ins.marianao.sailing.fxml.exception.OnFailedEventHandler;
 import ins.marianao.sailing.fxml.manager.ResourceManager;
 import ins.marianao.sailing.fxml.services.ServiceAuthenticate;
@@ -40,6 +41,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Priority;
+import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Pair;
@@ -93,7 +95,7 @@ public class ControllerMenu implements Initializable {
 	 */
 	@FXML
 	public void logoffClick(ActionEvent event) {
-
+		
 		this.logOff();
 	}
 
@@ -339,21 +341,28 @@ public class ControllerMenu implements Initializable {
 
 	public void openUserForm(User user) {
 		try {
-			// TODO Load form user view and load user profile when not null
-			
-			/*FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewFormUser.fxml"), ResourceManager.getInstance().getTranslationBundle());
-			BorderPane vista = (BorderPane)loader.load();
-
-			ControllerFormUser controllerFormUser = loader.getController();
-			controllerFormUser.loadUserProfile(user);
-			
-			this.loadView(vista);*/
-		} catch (Exception e) {
+			if (user !=null) {
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewFormRegister.fxml"), ResourceManager.getInstance().getTranslationBundle());
+					ResourceManager.getInstance().getTranslationBundle();
+				VBox vista_loader =(VBox) loader.load();
+				
+				
+				ControllerFormUser controllerFormUser = loader.getController();
+				controllerFormUser.loadUserProfile(user);
+				}else {
+						FXMLLoader register = new FXMLLoader(getClass().getResource("ViewFormRegister.fxml"),
+								ResourceManager.getInstance().getTranslationBundle());
+						
+						VBox vista_register = (VBox) register.load();
+				}
+			} catch(Exception e) {
 			e.printStackTrace();
-			ControllerMenu.showError(ResourceManager.getInstance().getText("error.menu.view.opening"), e.getMessage(), ExceptionUtils.getStackTrace(e));
+			ControllerMenu.showError(ResourceManager.getInstance().getText("error.menu.view.opening"), e.getMessage(),
+					ExceptionUtils.getStackTrace(e));
+			
+				}
 		}
-	}
-
+	
 	public static Button addIconToButton(Button button, Image image, int size) {
 		ImageView logo = new ImageView(image);
 		logo.setFitWidth(size);
