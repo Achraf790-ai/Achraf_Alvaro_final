@@ -30,7 +30,7 @@
             <Insets left="220.0" />
          </VBox.margin>
          <children>
-            <ComboBox fx:id="comboBox" maxWidth="269.0" prefWidth="241.0" />
+            <ComboBox fx:id="comboBox" maxWidth="269.0" prefWidth="241.0" promptText="Admin" />
          </children>
       </HBox>
       <HBox prefHeight="57.0" prefWidth="889.0" styleClass="input-group">
@@ -91,7 +91,7 @@
                   <Insets left="10.0" />
                </padding>
             </Label>
-            <TextField fx:id="txtName" maxWidth="350.0" minWidth="39.0" prefWidth="39.0" promptText="%fxml.text.viewUsers.search.prompt" HBox.hgrow="ALWAYS" />
+            <TextField fx:id="txtName" maxWidth="350.0" minWidth="39.0" prefWidth="39.0" promptText="%fxml.text.formUser.fullname" HBox.hgrow="ALWAYS" />
          </children>
          <VBox.margin>
             <Insets left="220.0" />
@@ -107,7 +107,7 @@
                   <Insets left="10.0" />
                </padding>
             </Label>
-            <TextField fx:id="txtPhone" maxWidth="350.0" minWidth="39.0" prefWidth="39.0" promptText="%fxml.text.viewUsers.search.prompt" HBox.hgrow="ALWAYS" />
+            <TextField fx:id="txtPhone" maxWidth="350.0" minWidth="39.0" prefWidth="39.0" promptText="%fxml.text.formUser.phone" HBox.hgrow="ALWAYS" />
          </children>
          <VBox.margin>
             <Insets left="220.0" />
@@ -115,7 +115,7 @@
       </HBox>
       <HBox prefHeight="57.0" prefWidth="889.0" styleClass="input-group">
          <children>
-            <Button fx:id="btnRegister" alignment="CENTER" defaultButton="true" maxWidth="441.0" minWidth="39.0" mnemonicParsing="false" onAction="#loginClick" prefHeight="36.0" prefWidth="40.0" styleClass="button-fullwidth" text="%fxml.text.formUser.submit" textAlignment="CENTER" />
+            <Button fx:id="btnRegister" alignment="CENTER" defaultButton="true" maxWidth="441.0" minWidth="39.0" mnemonicParsing="false" onAction="#registerClick" prefHeight="36.0" prefWidth="40.0" styleClass="button-fullwidth" text="%fxml.text.formUser.submit" textAlignment="CENTER" />
          </children>
          <VBox.margin>
             <Insets left="220.0" />

@@ -23,8 +23,8 @@ public class ControllerFormUser implements Initializable {
 	@FXML private TextField txtUsername;
 	@FXML private PasswordField txtPassword;
 	@FXML private PasswordField txtConfirm;
-	@FXML private PasswordField txtName;
-	@FXML private PasswordField txtPhone;
+	@FXML private TextField txtName;
+	@FXML private TextField txtPhone;
 	@FXML private Button btnRegister;
 	
 	@FXML private ComboBox<String> comboBox;
@@ -41,17 +41,18 @@ public class ControllerFormUser implements Initializable {
 	 *
 	 * @param event the action event.
 	 */
+	
+	// TODO esto para cuando le demos click al boton de registrase, esto de momento es del código de login.
 	@FXML
-	public void loginClick(ActionEvent event) {
+	public void registerClick(ActionEvent event) {
 
-		ResourceManager.getInstance().getMenuController().login(this.txtUsername.getText(),
-																this.txtPassword.getText());
 	}
 
-	public void loadUserProfile(User user) {
-		// TODO Auto-generated method stub
-		
-	}
+    public void loadUserProfile(User user) {
+        if (user != null) {
+        	txtUsername.setText(user.getUsername());
+        }
+    }
 	
 	
 }

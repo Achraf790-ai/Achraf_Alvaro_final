@@ -354,6 +354,7 @@ public class ControllerMenu implements Initializable {
 								ResourceManager.getInstance().getTranslationBundle());
 						
 						VBox vista_register = (VBox) register.load();
+						this.loadView(vista_register);
 				}
 			} catch(Exception e) {
 			e.printStackTrace();
