@@ -30,7 +30,7 @@
             <Insets left="220.0" />
          </VBox.margin>
          <children>
-            <ComboBox fx:id="comboBox" maxWidth="269.0" prefWidth="241.0" promptText="Admin" />
+            <ComboBox fx:id="comboBox" maxWidth="269.0" prefWidth="241.0" />
          </children>
       </HBox>
       <HBox prefHeight="57.0" prefWidth="889.0" styleClass="input-group">
