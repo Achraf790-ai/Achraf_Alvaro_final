@@ -4,11 +4,13 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import cat.institutmarianao.sailing.ws.model.User;
+import ins.marianao.sailing.fxml.exception.OnFailedEventHandler;
 import ins.marianao.sailing.fxml.manager.ResourceManager;
 import ins.marianao.sailing.fxml.services.ServiceSaveUser;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import javafx.concurrent.WorkerStateEvent;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -71,14 +73,24 @@ public class ControllerFormUser implements Initializable {
 	            alert.showAndWait();
 	            return;
 	        }
-	        
-	        
+	           
 	}
 	
 	private void addUsuari(User user) throws Exception{
 		final ServiceSaveUser saveUser = new ServiceSaveUser(user, null, null, null, false);
+		saveUser.setOnSucceeded(new EventHandler<WorkerStateEvent>() {
+			
+			@Override
+			public void handle(WorkerStateEvent event) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		saveUser.setOnFailed(new OnFailedEventHandler(ResourceManager.getInstance().getText("error.formUser.save.web.service")));
 		
+		saveUser.start();
 	}
+
 	// esto no es importnante para lo que queremos hacer actualmente
     public void loadUserProfile(User user) {
         if (user != null) {
